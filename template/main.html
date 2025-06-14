@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}"  >
+   
+</head>
+<body>
+    <h1>Weekdays</h1>
+    <!-- <h2>{{name}}</h2>
+    <h3>{{sid}}</h3>
+    <h3>{{address}}</h3>
+    <h3>{{ph_no}}</h3> -->
+
+
+    <!-- <h1>{{weekdays}}</h1>
+    {% for key,value in weekdays.items %}
+        <p>{{key}}, {{value}}</p>
+    {% endfor %} -->
+   <div class="block">
+    {% for day in weekday %}
+        <a class="day" href="{{day}}"> {{day}}</a>
+    {% endfor %}    
+   </div>
+   
+
+</body
+</html>
+
+   

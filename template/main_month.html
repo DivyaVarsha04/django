@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main_month</title>
+    <link rel="stylesheet" href="{% static 'main_month.css' %}">
+</head>
+<body>
+    <h1>Months</h1>
+    <div class="block">
+        {% for mont in month %}
+            <a class="inf" href="{{mont}}">{{mont}}</a>
+        {% endfor%}
+    </div>
+</body>
+</html>
