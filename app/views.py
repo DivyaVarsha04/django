@@ -1,8 +1,8 @@
-
+from django.http import HttpResponseNotFound
+from django.shortcuts import HttpResponse,redirect,render
+from app.models import Students
 
 # Create your views here.
-
-from django.shortcuts import HttpResponse,redirect,render
 
 def home(request):
     return redirect('login')
@@ -106,5 +106,12 @@ def months(request,month):
 
 
 
-
-
+def stu(request):
+    res=Students.objects.all()
+    # for i in res:
+    #    print(f' First Name: {i.first_name}\n Last Name:{i.last_name}\n Age:{i.age}\n Course:{i.course}\n Join_date:{i.join_date}\n Phone_No:{i.phone} ')
+    context={
+        "info":res
+    }
+    return render(request,"stu.html",context)
+    

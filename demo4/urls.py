@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from app import views
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/',views.home,name='home'),
@@ -43,6 +45,7 @@ urlpatterns = [
     path('main/<days>/',views.days),
     path('main_mon/',views.main_month),
     path('main_mon/<month>/',views.months),
+    path('stu/',views.stu), 
     
     
    
